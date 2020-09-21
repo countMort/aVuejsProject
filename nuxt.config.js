@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
-const URL = "http://localhost:3000"
+// const URL = "http://localhost:3000"
+const URL = "https://cookarium-apis.herokuapp.com"
 
 export default {
   /*
