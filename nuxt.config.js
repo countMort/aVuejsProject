@@ -93,17 +93,18 @@ export default {
 
   pwa : {
     icon : {
-      source : '~/static/icon.png' ,
+      source : '~/static/icon.ico' ,
     } ,
     manifest : {
       short_name : 'CKM' ,
       name : 'Cookarium' ,
-      lage : "fa" ,
+      lang : "fa" ,
       start_url : '/' ,
       theme_color : '#1e76a6' ,
+      display: 'browser' ,
       icons : [
         {
-          source : '~/static/icon.png' ,
+          source : '~/static/icon.ico' ,
           purpose : 'manifest'
         }
       ]
