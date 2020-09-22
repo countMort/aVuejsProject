@@ -50,9 +50,9 @@
               <v-flex class="success py-1">موجود در فروشگاه &nbsp;<v-icon>mdi-check</v-icon></v-flex>
               </v-card>
             </v-list-item-content>
-            <v-list-item-avatar class="mt-12" icon :size="maxWidth*0.19" color=grey>
+            <!-- <v-list-item-avatar class="mt-12" icon :size="maxWidth*0.19" color=grey>
               <v-img :src="product.photo"></v-img>
-            </v-list-item-avatar>
+            </v-list-item-avatar> -->
           </v-list-item>
           <v-card-actions>
             <v-row>
