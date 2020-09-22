@@ -101,7 +101,7 @@ export default {
       lang : "fa" ,
       start_url : '/' ,
       theme_color : '#1e76a6' ,
-      display: 'browser' ,
+      display: 'minimal-ui' ,
       icons : [
         {
           source : '~/static/icon.ico' ,
