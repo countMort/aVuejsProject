@@ -138,7 +138,7 @@ export default {
   build: {
   } ,
   server: {
-    port : 9000
+    port : process.env.PORT || 9000
   },
   auth: {
     strategies: {
