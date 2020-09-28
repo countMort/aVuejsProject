@@ -99,7 +99,7 @@
                             this.$store.dispatch('notif' , {msg : result.data.message , type : "success"})
                             setTimeout(()=> {
                                 location.reload()
-                            } , 4500)
+                            } , 1500)
                         }).catch((error) => {
                             this.loading = false
                             // console.log(error.response);

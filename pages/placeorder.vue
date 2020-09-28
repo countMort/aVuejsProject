@@ -131,24 +131,23 @@
                 max-width="40rem"
                 src="https://i.pinimg.com/originals/73/5c/ab/735cabd7d4b6dd810dc33c3978edb756.jpg"
                 >
-                <v-btn
-                @click="overlay = false"
-                text
-                color="none"
-                >
-                <v-icon>mdi-close</v-icon> بستن
-                </v-btn>
-                    <v-list-item
-                        color="rgba(0, 0, 0, .4)"
-                        dark
-                        three-line
+                    <v-btn
+                    @click="overlay = false"
+                    text
+                    color="none"
                     >
-                        <v-list-item-content>
-                        <v-card max-width="400" id=card :loading=loading color="black" class="mx-auto elevation-19 py-2">
-                            <hr>
-                            <v-list-item-title class="success">
-                                بسته شما <br>
-                                <v-flex>
+                    <v-icon>mdi-close</v-icon> بستن
+                    </v-btn>
+                    <v-list style="opacity: 70%;">
+                        <v-list-item
+                            color="rgba(0, 0, 0, .4)"
+                            dark
+                            three-line
+                        >
+                            <v-list-item-content>
+                                <hr>
+                                <v-list-item-title class="success py-8">
+                                    بسته شما <br>
                                     <span v-for="product in getCart" :key="product.id">
                                         <v-avatar size=40>
                                         <v-img :src="product.photo">
@@ -156,24 +155,21 @@
                                         </v-avatar>
                                         {{product.quantity}}
                                     </span>
-                                </v-flex>
-                                در روز
-                                <v-divider class="my-1 success" />
-                                {{estimatedDelivery}}
-                                <v-divider class="my-1 success" />
-                                خواهد رسید.
-                            </v-list-item-title>
-                            <br>
-                        <v-list-item-subtitle>از صحت اطلاعات ارسال مطمئن هستید؟</v-list-item-subtitle>
-                        <br>
-                        <!-- <v-list-item-title class="font-weight-bold">قیمت هر یک عدد: {{product.price}}  تومان</v-list-item-title> -->
-                        <hr class="my-1">
-                        <v-btn min-width="50%" @click="submit" color="success" class="mx-auto"><v-icon>mdi-truck-delivery-outline</v-icon>&nbsp;تایید و ارسال</v-btn>
-                        </v-card>
-                        </v-list-item-content>
-                    </v-list-item>
-                    <v-card-actions>
-                    </v-card-actions>
+                                    <br>
+                                    در روز
+                                    <v-divider class="my-1 success" />
+                                    {{estimatedDelivery}}
+                                    <v-divider class="my-1 success" />
+                                    خواهد رسید.
+                                </v-list-item-title>
+                                <br>
+                                <v-list-item-subtitle class="my-5">از صحت اطلاعات ارسال مطمئن هستید؟</v-list-item-subtitle>
+                                <!-- <v-list-item-title class="font-weight-bold">قیمت هر یک عدد: {{product.price}}  تومان</v-list-item-title> -->
+                                <hr class="my-1">
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list>
+                    <v-btn min-width="50%" @click="submit" color="success" class="mx-auto my-2"><v-icon>mdi-truck-delivery-outline</v-icon>&nbsp;تایید و ارسال</v-btn>
                 </v-img>
             </v-card>
         </v-overlay>
@@ -270,8 +266,5 @@ import { mapGetters } from "vuex"
 }
 #estimatedDelivery {
     font-size: 0.95rem;
-}
-#card {
-    opacity: 90%;
 }
 </style>
