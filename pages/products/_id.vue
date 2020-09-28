@@ -123,7 +123,7 @@ import reviewSection from "~/components/review-section"
         async deleteProduct() {
             try {
                 let result = await this.$axios.$delete(`/api/products/${this.$route.params.id}`)
-                result.success ? this.$nuxt.$router.push('/') : ''
+                result.success ? this.$nuxt.$router.push('/home') : ''
             } catch (error) {
                 console.log(error);
             }
