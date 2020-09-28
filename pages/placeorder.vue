@@ -233,7 +233,7 @@ import { mapGetters } from "vuex"
                         cart : this.getCart ,
                         estimatedDelivery : this.getEstimatedDelivery ,
                         createdTime : this.createdTime ,
-                        deliverTo : this.$auth.user.address._id
+                        deliverTo : this.$store.state.auth.user.address._id
                     })
                     if (response.success) {
                         this.loading = false
