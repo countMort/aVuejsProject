@@ -29,6 +29,17 @@
         mounted () {
             this.$axios.get('/api/products/5f131459a775582248527ec8')
             .then(() => location.replace('/home'))
+            setTimeout(function () {
+                this.dot = '..'
+            }.bind(this) , 1000)
+            setTimeout(function () {
+                this.dot = '...'
+            }.bind(this) , 2000)
+            setTimeout(function () {
+                this.dot = '....'
+            }.bind(this) , 3000)
+            setInterval(function () {
+                this.dot = '.'
                 setTimeout(function () {
                     this.dot = '..'
                 }.bind(this) , 1000)
@@ -38,18 +49,7 @@
                 setTimeout(function () {
                     this.dot = '....'
                 }.bind(this) , 3000)
-                setInterval(function () {
-                    this.dot = '.'
-                    setTimeout(function () {
-                        this.dot = '..'
-                    }.bind(this) , 1000)
-                    setTimeout(function () {
-                        this.dot = '...'
-                    }.bind(this) , 2000)
-                    setTimeout(function () {
-                        this.dot = '....'
-                    }.bind(this) , 3000)
-                }.bind(this), 4000)
+            }.bind(this), 4000)
         },
     }
 </script>
