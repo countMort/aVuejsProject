@@ -27,8 +27,6 @@
             }
         },
         mounted () {
-            this.$axios.get('/api/products/5f131459a775582248527ec8')
-            .then(() => location.replace('/home'))
             setTimeout(function () {
                 this.dot = '..'
             }.bind(this) , 1000)
@@ -50,6 +48,8 @@
                     this.dot = '....'
                 }.bind(this) , 3000)
             }.bind(this), 4000)
+            this.$axios.get('/api/products/5f131459a775582248527ec8')
+            .then(() => location.replace('/home'))
         },
     }
 </script>
