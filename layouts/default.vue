@@ -35,7 +35,7 @@
           ></v-img>
         </template>
 
-        <v-app-bar-nav-icon nuxt to="/" ><v-icon color=indigo x-large>mdi-cupcake</v-icon></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon nuxt to="/home" ><v-icon color=indigo x-large>mdi-cupcake</v-icon></v-app-bar-nav-icon>
         <v-toolbar-title class="pb-2">کوکاریوم</v-toolbar-title>
         <template v-slot:extension>
           <template v-if="!$store.state.auth.loggedIn">

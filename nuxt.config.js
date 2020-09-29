@@ -150,6 +150,12 @@ export default {
           user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
         }
       }
+    } ,
+    redirect: {
+      login: '/login',
+      logout: '/home',
+      callback: '/signup',
+      home: '/home'
     }
   }
 }
